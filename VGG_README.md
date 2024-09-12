@@ -111,7 +111,7 @@ model.add(layers.Dense(10, activation='softmax'))
 Below is a visual representation of the VGG-16 architecture:
 
 <!-- ![VGG-16 Architecture](/architecture_visualizer.png) -->
-<img src="architecture_visualizer.png" alt="VGG-16 Architecture" width="700"/>
+<img src="architecture_visualizer.png" alt="VGG-16 Architecture" width="550"/>
 
 
 ## Demonstration
