@@ -8,7 +8,8 @@ This section provides an overview of the VGG-16 architecture and its adaptation 
 
 ## Architecture Overview
 
-The VGG-16 model consists of 16 layers (13 convolutional layers and 3 fully connected layers). Here’s a breakdown of the architecture:
+The VGG-16 model consists of 16 layers (13 convolutional layers and 3 fully connected layers). The model employs small 3x3 convolutional filters stacked in a uniform manner. This design enables VGG-16 to learn complex features from images while maintaining spatial dimensions through consistent use of small receptive fields. The network’s architecture features deep stacks of convolutional layers followed by max-pooling layers to reduce spatial dimensions and computational complexity.
+Here’s a breakdown of the architecture:
 
 ### Layer-wise Breakdown
 
@@ -39,10 +40,10 @@ The VGG-16 model consists of 16 layers (13 convolutional layers and 3 fully conn
      - **MaxPooling2D (2x2):** Output size = 14 x 14 x 512
 
    - **Fifth Block:**
-     - **Conv2D (512 filters, 3x3):** Output size = 14x14x512
-     - **Conv2D (512 filters, 3x3):** Output size = 14x14x512
-     - **Conv2D (512 filters, 3x3):** Output size = 14x14x512
-     - **MaxPooling2D (2x2):** Output size = 7x7x512
+     - **Conv2D (512 filters, 3x3):** Output size = 14 x 14 x 512
+     - **Conv2D (512 filters, 3x3):** Output size = 14 x 14 x 512
+     - **Conv2D (512 filters, 3x3):** Output size = 14 x 14 x 512
+     - **MaxPooling2D (2x2):** Output size = 7 x 7 x 512
 
 3. **Fully Connected Layers:**
    - **Flatten:** Converts 7 x 7 x 512 feature maps to a 1D vector of size 25,088.
@@ -103,7 +104,7 @@ model.add(layers.Dense(10, activation='softmax'))
 
 ## Dataset
 
-- **CIFAR-10**: A dataset consisting of 60,000 32x32 color images in 10 classes, with 6,000 images per class. For this project, a subset of 1,000 images for training and 200 images for testing is utilized.
+**CIFAR-10**: A dataset consisting of 60,000 32x32 color images in 10 classes, with 6,000 images per class. For this project, a subset of 1,000 images for training and 200 images for testing is utilized.
 
 ## Visualization
 
@@ -111,5 +112,6 @@ Architecture Diagram
 
 ## Demonstration
 
-Note: Training is not performed in this demonstration due to limitations on local resources, we focus on using pre-trained weights and feature extraction.
-**Link**: Notebook Link
+- **Training:** In this implementation, the training step is omitted due to local resource constraints. The model's architecture is tested for its functionality only.
+- **Testing Accuracy:** The model is evaluated on a subset of the test data to check its performance.
+- **Link**: Notebook Link
