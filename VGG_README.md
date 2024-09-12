@@ -1,10 +1,10 @@
 # VGG-16 Implementation on CIFAR-10 Dataset
 
-This project showcases the application of the **VGG-16** Convolutional Neural Network (CNN) architecture, which is renowned for its depth and simplicity. The model is tested on the **CIFAR-10** dataset, a common benchmark for image classification tasks. Due to local resource constraints, we focus on using pre-trained weights and feature extraction rather than training the model.
+This part showcases the application of the **VGG-16** Convolutional Neural Network (CNN) architecture, which is renowned for its depth and simplicity. The model is tested on the **CIFAR-10** dataset, a common benchmark for image classification tasks.
 
-## Project Structure
+## Structure
 
-This section provides an overview of the VGG-16 architecture and its adaptation to the CIFAR-10 dataset. The focus is on resizing the dataset to match the VGG-16 input requirements and using pre-trained weights for feature extraction.
+This section provides an overview of the VGG-16 architecture and its adaptation to the CIFAR-10 dataset. The focus is on resizing the dataset to match the VGG-16 input requirements.
 
 ## Architecture Overview
 
@@ -13,30 +13,30 @@ The VGG-16 model consists of 16 layers (13 convolutional layers and 3 fully conn
 ### Layer-wise Breakdown
 
 1. **Input Layer:**
-   - **Input Size:** 224x224x3 (Resized CIFAR-10 images)
+   - **Input Size:** 224 x 224 x 3 (Resized CIFAR-10 images)
 
 2. **Convolutional Blocks:**
    - **First Block:**
-     - **Conv2D (64 filters, 3x3):** Output size = 224x224x64
-     - **Conv2D (64 filters, 3x3):** Output size = 224x224x64
-     - **MaxPooling2D (2x2):** Output size = 112x112x64
+     - **Conv2D (64 filters, 3x3):** Output size = 224 x 224 x 64
+     - **Conv2D (64 filters, 3x3):** Output size = 224 x 224 x 64
+     - **MaxPooling2D (2x2):** Output size = 112 x 112 x 64
 
    - **Second Block:**
-     - **Conv2D (128 filters, 3x3):** Output size = 112x112x128
-     - **Conv2D (128 filters, 3x3):** Output size = 112x112x128
-     - **MaxPooling2D (2x2):** Output size = 56x56x128
+     - **Conv2D (128 filters, 3x3):** Output size = 112 x 112 x 128
+     - **Conv2D (128 filters, 3x3):** Output size = 112 x 112 x 128
+     - **MaxPooling2D (2x2):** Output size = 56 x 56 x 128
 
    - **Third Block:**
-     - **Conv2D (256 filters, 3x3):** Output size = 56x56x256
-     - **Conv2D (256 filters, 3x3):** Output size = 56x56x256
-     - **Conv2D (256 filters, 3x3):** Output size = 56x56x256
-     - **MaxPooling2D (2x2):** Output size = 28x28x256
+     - **Conv2D (256 filters, 3x3):** Output size = 56 x 56 x 256
+     - **Conv2D (256 filters, 3x3):** Output size = 56 x 56 x 256
+     - **Conv2D (256 filters, 3x3):** Output size = 56 x 56 x 256
+     - **MaxPooling2D (2x2):** Output size = 28 x 28 x 256
 
    - **Fourth Block:**
-     - **Conv2D (512 filters, 3x3):** Output size = 28x28x512
-     - **Conv2D (512 filters, 3x3):** Output size = 28x28x512
-     - **Conv2D (512 filters, 3x3):** Output size = 28x28x512
-     - **MaxPooling2D (2x2):** Output size = 14x14x512
+     - **Conv2D (512 filters, 3x3):** Output size = 28 x 28 x 512
+     - **Conv2D (512 filters, 3x3):** Output size = 28 x 28 x 512
+     - **Conv2D (512 filters, 3x3):** Output size = 28 x 28 x 512
+     - **MaxPooling2D (2x2):** Output size = 14 x 14 x 512
 
    - **Fifth Block:**
      - **Conv2D (512 filters, 3x3):** Output size = 14x14x512
@@ -45,7 +45,7 @@ The VGG-16 model consists of 16 layers (13 convolutional layers and 3 fully conn
      - **MaxPooling2D (2x2):** Output size = 7x7x512
 
 3. **Fully Connected Layers:**
-   - **Flatten:** Converts 7x7x512 feature maps to a 1D vector of size 25,088.
+   - **Flatten:** Converts 7 x 7 x 512 feature maps to a 1D vector of size 25,088.
    - **Dense (256 units, ReLU):** Output size = 256
    - **Dropout (0.5):** Applied to reduce overfitting.
    - **Dense (10 units, Softmax):** Output size = 10 (classification into CIFAR-10 classes)
@@ -111,5 +111,5 @@ Architecture Diagram
 
 ## Demonstration
 
-- **Note**: Training is not performed in this demonstration due to limitations on local resources.
-- **Link**: Notebook Link
+Note: Training is not performed in this demonstration due to limitations on local resources, we focus on using pre-trained weights and feature extraction.
+**Link**: Notebook Link
