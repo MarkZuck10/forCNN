@@ -2,9 +2,9 @@
 
 This project demonstrates an implementation of the **LeNet-5** Convolutional Neural Network (CNN) architecture, a pioneering model in deep learning designed for handwritten digit classification, specifically tested on the **MNIST** dataset.
 
-## Project Structure
+## Structure
 
-This project is part of a larger CNN repository, but it has its own independent README as it focuses on the LeNet architecture. The model has been built from scratch using Keras, trained on the MNIST dataset, and evaluated with testing data to achieve high classification accuracy.
+This part focuses on the LeNet architecture. The model has been built from scratch using Keras, trained on the MNIST dataset, and evaluated with testing data to achieve high classification accuracy.
 
 ## Architecture Overview
 
@@ -52,28 +52,28 @@ LeNet-5 consists of 7 layers (not counting the input layer), including:
 - Input: 32 x 32, Filters: 6, Kernel: 5 x 5
 - Operation: 
   \[
-  ((N + 2P - F) / S) + 1 = ((32 + 0 - 5) / 1) + 1 = 28 \times 28 \times 6
+  ((N + 2P - F) / S) + 1 = ((32 + 0 - 5) / 1) + 1 = 28 * 28 * 6
   \]
   
 #### Pooling Layer 1 (S2):
 - Input: 28 x 28 x 6, Filter: 2 x 2, Stride: 2
 - Operation: 
   \[
-  ((N + 2P - F) / S) + 1 = ((28 + 0 - 2) / 2) + 1 = 14 \times 14 \times 6
+  ((N + 2P - F) / S) + 1 = ((28 + 0 - 2) / 2) + 1 = 14 * 14 * 6
   \]
 
 #### Convolutional Layer 2 (C3):
 - Input: 14 x 14 x 6, Filters: 16, Kernel: 5 x 5
 - Operation:
   \[
-  ((N + 2P - F) / S) + 1 = ((14 + 0 - 5) / 1) + 1 = 10 \times 10 \times 16
+  ((N + 2P - F) / S) + 1 = ((14 + 0 - 5) / 1) + 1 = 10 * 10 * 16
   \]
 
 #### Pooling Layer 2 (S4):
 - Input: 10 x 10 x 16, Filter: 2 x 2, Stride: 2
 - Operation:
   \[
-  ((N + 2P - F) / S) + 1 = ((10 + 0 - 2) / 2) + 1 = 5 \times 5 \times 16
+  ((N + 2P - F) / S) + 1 = ((10 + 0 - 2) / 2) + 1 = 5 * 5 * 16
   \]
 
 #### Fully Connected Layer (F6):
@@ -83,9 +83,8 @@ LeNet-5 consists of 7 layers (not counting the input layer), including:
 ## Training and Testing
 
 - **Dataset**: MNIST Handwritten Digits Dataset
-- **Training Accuracy**: Achieved **99.2%** training accuracy after 10 epochs
+- **Training Accuracy**: Achieved **99.4%** training accuracy after 10 epochs
 - **Testing Accuracy**: Achieved **98.8%** on the test dataset
-- **Loss**: Cross-entropy loss used to train the model.
 
 ## Results
 
@@ -98,5 +97,4 @@ LeNet-5 consists of 7 layers (not counting the input layer), including:
 
 ## Model Summary
 
-```python
-model.summary()
+For implementation, check this workbook
