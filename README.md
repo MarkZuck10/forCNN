@@ -95,6 +95,6 @@ LeNet-5 consists of 7 layers (not counting the input layer), including:
 
 - **MNIST**: The dataset consists of 70,000 grayscale images of handwritten digits. 60,000 images are used for training, and 10,000 for testing.
 
-## Model Summary
+## Model Working
 
 For implementation, check this workbook
