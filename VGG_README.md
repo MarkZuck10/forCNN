@@ -118,4 +118,4 @@ Below is a visual representation of the VGG-16 architecture:
 
 - **Training:** In this implementation, the training step is omitted due to local resource constraints. The model's architecture is tested for its functionality only.
 - **Testing Accuracy:** The model is evaluated on a subset of the test data to check its performance.
-- **Link**: Notebook Link
+- **Link to Notebook:** [View the notebook here](notebooks/your_notebook.ipynb)
